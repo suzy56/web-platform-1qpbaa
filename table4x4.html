@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style type="text/css">
+    #container {
+      width: 200px;
+      height: 200px;
+      border-radius: 5px;
+      background-color: purple;
+    }
+    #container > div {
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      margin-top: 8px;
+      margin-left: 8px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 4px;
+      float: left;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div id="container"></div>
+    <script>
+      (function () {
+        var arr = [
+          [0, 0, 0, 0],
+          [0, 0, 0, 0],
+          [0, 0, 0, 0],
+          [0, 0, 0, 0],
+        ];
+        for (var i = 0; i < 4; i++) {
+          for (var j = 0; j < 4; j++) {
+            var parent = document.querySelector('#container');
+            var cell = document.createElement('div');
+            cell.innerHTML = `(${i},${j})`;
+            parent.append(cell);
+            cell.onclick = (function (i, j) {
+              return function () {
+                arr[i][j]++;
+                alert(`第${arr[i][j]}次`);
+              };
+            })(i, j);
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
