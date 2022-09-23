@@ -1,0 +1,152 @@
+/*音频播放相关样式*/
+#player-object{
+    width:900px;
+    height: 500px;
+}
+#player-object #mp3LrcBox{
+    height:calc(100% - 50px);
+    background: #333;
+}
+#player-object #mp3CtrlBox{
+    height:50px;
+}
+#mp3CtrlBox .progress{
+    height:5px;width:calc(100% - 15px);background:#fff;position:relative;cursor: pointer;
+}
+#mp3CtrlBox .progress_bar{
+    margin: 0;
+   position:absolute;left:0;top:0;background:#096;height:100%;width:0;
+}
+#mp3CtrlBox .progress_control{
+    cursor: pointer;position:absolute;left:0;top:-5px;background:#096;height:15px;width:15px;border-radius:50%;
+}
+#mp3CtrlBox .progress_pad{
+    cursor: pointer;display:inline-block;width:15px;height:5px;background:#fff;float: right;margin-top: -5px;
+}
+#mp3CtrlBox .control_box{
+    text-align:left;
+    height: 40px;
+    line-height: 40px;
+    background: #111;
+}
+#mp3CtrlBox .control_box .play_btn{
+    display:none;
+    width:15px;height:15px;
+    margin:0 10px;
+    cursor: pointer;
+}
+#mp3CtrlBox .control_box .play_loading{
+    display:inline-block;
+    width:15px;height:15px;
+    margin:0 10px;
+    background: url(img/loading-bg-black.gif) no-repeat;
+}
+#mp3CtrlBox .control_box .play_on{
+    background: url(img/mp3-player-skin.png) -24px -2px no-repeat;
+}
+#mp3CtrlBox .control_box .play_pause{
+    background: url(img/mp3-player-skin.png) -5px -2px no-repeat;
+}
+#mp3CtrlBox .control_box .play_time{
+    display:inline-block;font-size:14px;color:#fff;
+}
+.volume_box{
+    float: right;margin-right: 10px;
+    height: 26px;
+    line-height: 26px;
+    margin-top: 6px;
+}
+.volume_box .volume_btn{
+    display: inline-block;
+    width: 15px;height: 15px;
+    background: blue;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.volume_box #volume_on{
+    background: url(img/mp3-player-skin.png) -5px -22px no-repeat;
+}
+.volume_box #volume_pause{
+    background: url(img/mp3-player-skin.png) -24px -22px no-repeat;
+}
+.volume_box .volume_progress{
+    display: inline-block;
+    margin-right: 10px;
+    width: 100px;
+    height: 5px;
+    background: #333;
+    position: relative;
+    cursor: pointer;
+}
+.volume_box .volume_progress .volume_bar{
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #096;
+    width: 100%;
+    display:inline-block;
+}
+.volume_box .volume_progress .volume_control{
+    position: absolute;
+    right: 0;top: -5px;
+    display: inline-block;
+    width: 5px;
+    height: 15px;
+    background: #999;
+    cursor: pointer;
+}
+/*未关注公共号二维码弹窗*/
+.dialog .dialog-body .weTitle{
+    width: 450px;
+    padding: 20px 0 20px 0;
+    margin: 0 auto;
+    border-bottom: 2px solid #f0f0f0;
+}
+.dialog .dialog-body .weImgbox{
+    padding: 20px 00px 20px 0px ;
+    width: 200px;
+    height: 180px;
+    margin:0 auto;
+}
+.weImgbox .weImg{
+    width: 100%;
+}
+.weBottom{
+    color: #a0a0a0;
+}
+/*音频字幕*/
+#mp3LrcBox{
+    background: url('img/player_mp3_bg1.jpg') no-repeat center; 
+    background-size:100% 100%; 
+    overflow: hidden;
+}
+#mp3LrcTxt{
+    height: calc(100% - 140px);
+    margin: 70px 0;
+    overflow: hidden;
+}
+#mp3LrcBox #mp3LrcTxt div{
+    color: #fff;
+    -moz-opacity:0.3;
+    opacity:0.3;
+    filter:alpha(opacity=30);
+    margin-top: 30px;
+    font-size: 18px;
+    text-align: center;
+}
+#mp3LrcBox #mp3LrcTxt .active{
+    color:#fff;
+    font-size:20px;
+    -moz-opacity:1;
+    opacity:1;
+    filter:alpha(opacity=100);
+}
+#mp3LrcBox #mp3LrcTxt .lrcTxtErr{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -125px;
+    margin-top:-50px; 
+}
